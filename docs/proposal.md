@@ -3,8 +3,6 @@ layout: default
 title:  Proposal
 ---
  
-# Music/Sound Player
-
 ## Summary of the Project 
 Our project will take sound as input. This can for example be songs or humming from humans. The output will be music note blocks in the Malmo environment that recreate the given sound (e.g. song) in the Minecraft world. Ideally, the music blocks in the Minecraft world will resemble the given sound very closely. 
 
