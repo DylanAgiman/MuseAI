@@ -6,11 +6,11 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
-***UCI Net ID***: ucinetid1
+## Dylan Agiman
+***UCI Net ID***: dagiman
 
-## USER 2
-***UCI Net ID***: ucinetid2
+## Jens Tuyls
+***UCI Net ID***: jtuyls
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Jessica Chen
+***UCI Net ID***: jessic13
