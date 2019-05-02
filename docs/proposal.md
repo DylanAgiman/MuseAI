@@ -15,9 +15,9 @@ The success of our project will focus primarily on the ability of the AI to gene
 We should be able to discern progress towards the final goal by listening to the sounds being produced; if the sounds are completely incorrect, or if no progress is being made towards the ideal sounds, the algorithm might not be working as intended. <br>
 
 ## Appointment with Instructor
-### First appointment: <br>
+**First appointment:** <br>
 Date: 4/24/19 (Week 4, Wednesday) <br>
 Time: 4:15 pm - 4:30 pm <br>
 
-### Second appointment: <br>
+**Second appointment:** <br>
 TBD...
