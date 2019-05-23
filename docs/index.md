@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-Source code: https://github.com/USER/PROJECT (_fix this_)
+Source code: https://github.com/jens321/MuseAI (_fix this_)
 
 Reports:
 
@@ -11,30 +11,8 @@ Reports:
 - [Status](status.html)
 - [Final](final.html)
 
-What's Markdown (`.md`)?
+![graphic of head and music](head_music.jpg)
 
-Markdown is markup that lets you write hypertext (HTML) documents
-in easy-to-read and easy-to-write plain text.
-No angle brackets `<></>` required for
-paragraphs, lists, blockquotes, tables, etc.
+### Summary
 
-
-This is a paragraph (in Markdown). Some more
-text here.
-
-This is another paragraph.
-
-This is a list:
-
-- Orange
-- Apple
-- Blueberry
-
-$$x^2 = y^2$$
-
-
-Just getting started with Markdown?
-See the [HTML <-> Markdown Quick Reference (Cheat Sheet)][quickref].
-
-
-[quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
+Our project will take sound as input, specifically music in MIDI file format. The output will be music generated from our model and played in the Malmo environment using note blocks. The goal of this project is to generate music that is inspired by the music that the model trained on. For example, if the model is trained on Bach's music, the music generated will be similar to Bach's. If the model trained on Bach's and Mozart's music, the music generated will be influenced by both composers.
