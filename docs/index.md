@@ -11,7 +11,7 @@ Reports:
 - [Status](status.html)
 - [Final](final.html)
 
-<img src="head_music.jpg" width=600 align=left>
+<img src="https://github.com/DylanAgiman/MuseAI/blob/master/docs/head_music.jpg" width=600 align=left>
 
 ### Summary
 
