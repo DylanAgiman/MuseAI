@@ -11,7 +11,7 @@ Reports:
 - [Status](status.html)
 - [Final](final.html)
 
-![graphic of head and music](head_music.jpg | width = 1500)
+<img src="head_music.jpg" width=600 align=left>
 
 ### Summary
 
