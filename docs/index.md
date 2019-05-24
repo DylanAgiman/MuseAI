@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-Source code: https://github.com/jens321/MuseAI (_fix this_)
+Source code: https://github.com/jens321/MuseAI
 
 Reports:
 
@@ -11,7 +11,7 @@ Reports:
 - [Status](status.html)
 - [Final](final.html)
 
-<img src="https://github.com/DylanAgiman/MuseAI/blob/master/docs/head_music.jpg" width=600 align=left>
+![image of head and music](head_smaller.jpg)
 
 ### Summary
 
