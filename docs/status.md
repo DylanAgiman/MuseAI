@@ -5,12 +5,20 @@ title: Status
 
 ## Project Summary
 ------------------
+The purpose of this project is to create a model that, given music as training data, can recreate music of the same genre given a musical start (around 10 notes). The type of music generated will depend largely on the type of music trained on. For example a model trained on Bach will yield Bach-esque results, while other models might have different characteristics. Once this music is generated, we then use Malmo to create a series of note blocks that the agent can play in order to play the music on the Minecraft platform.
 
 ## Approach
 -----------
 
+
 ## Evaluation
 -------------
+Since the project is primarily in the category of art, it is difficult to come up with an accurate evaluation metric that will describe the "musicality" of a piece with reliability. However the metric we chose consists of testing the generated piece of music against a holdout set of notes, in order to compare how similar they are. For our simplified evaluation criteria, we are using a simple "on or off" approach. If the predicted note is precisely the same note of the validation note, then the model is given a point for accuracy, otherwise it receives no points for that note. 
+<br><br>
+This is the not the most accurate method of evaluating the function, but it allows us to get an idea of how similar our piece is to another piece of the same genre. As the number of pieces on which the model trains increases, the accuracy of the model also increases, albeit much more slowly than should be optimal. This graph illustrates the increase of the accuracy with an increase of trained pieces:
+<br><br>
+GRAPH HERE
+<br><br>
 
 ## Remaining Goals and Challenges
 ---------------------------------
