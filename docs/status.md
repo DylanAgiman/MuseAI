@@ -23,7 +23,7 @@ We chose the random forest architecture as a starting point to allow for rapid t
 
 ## Evaluation
 -------------
-Since the project is primarily in the category of art, it is difficult to come up with an accurate evaluation metric that will describe the "musicality" of a piece with reliability. However the metric we chose consists of testing the generated piece of music against a holdout set of notes, in order to compare how similar they are. For our simplified evaluation criteria, we are using a simple "on or off" approach. If the predicted note is precisely the same note of the validation note, then the model is given a point for accuracy, otherwise it receives no points for that note. 
+Since the project is primarily in the category of art, it is difficult to come up with an accurate evaluation metric that will describe the "musicality" of a piece with reliability. However the metric we chose consists of testing the generated piece of music against a holdout set of notes, in order to compare how similar they are. For our simplified evaluation criteria, we are using a simple "on or off" approach. If the predicted note is precisely the same note as the validation note, then the model is given a point for accuracy, otherwise it receives no points for that note. 
 <br><br>
 This is the not the most accurate method of evaluating the function, but it allows us to get an idea of how similar our piece is to another piece of the same genre. As the number of pieces on which the model trains increases, the accuracy of the model also increases, albeit much more slowly than should be optimal. This graph illustrates the increase of the accuracy with an increase of trained pieces:
 <br><br>
