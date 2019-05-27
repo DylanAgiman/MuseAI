@@ -9,7 +9,11 @@ The purpose of this project is to create a model that, given music as training d
 
 ## Approach
 -----------
-
+For the technical components of the project, we make use of scikit learn's Random Forest package to serve as the primary model for the project. A decision we had to make was how to set up the dataset to allow for the best training results. In our testing, the best results were had when using the 10 previous notes in order to predict the last note, updating the dataset as new information is predicted. This allows the model to follow the general trend of the trained music, while sacrificing some of the long-term pattern awareness that we were shooting for.
+<br><br>
+For a more detailed description of how the dataset was created, we initially start off the training with a 10-note start from a song in order to begin the dataset creation. Once these 10 notes are in place, the model can begin using the trained random forest to make predictions for future notes, updating the dataset along the way. In this way, the model can keep seeing new combinations of notes and make appropriate selections based on the training, even if it has not seen that precise combination of notes in the past.
+<br><br>
+We chose the random forest architecture as a starting point to allow for rapid testing, but we will likely be shifting to a more neural-network-oriented approach, as this will allow the generated music to have better long-term coherence. Since random forests are a very simplified way to approach the problem, this is not a possibility in the  project as it currently stands. 
 
 ## Evaluation
 -------------
