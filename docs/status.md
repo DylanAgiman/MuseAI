@@ -29,6 +29,7 @@ This is the not the most accurate method of evaluating the function, but it allo
 <br><br>
 ![training graph](Training_graph.png)
 <br><br>
+As we can see from the graph, an increase in the number of musical pieces that the model trains on yields an improvement in the accuracy of the model, to a certain point. After training on more than approximately 200 songs, the test accuracy goes down, indicating that the model might be overtraining on the songs. A way to avoid this might be to train on more diverse pieces of music, to discourage the model from getting too specialized on a certain type of song. In addition, increasing the number of estimators for the random forest would allow us to reduce the overfitting, and allow for a less specialized, but more generalizeable model that can predict a wide variety of songs with decent accuracy.
 
 ## Remaining Goals and Challenges
 ---------------------------------
