@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-Source code: https://github.com/jens321/MuseAI
+Source code: [https://github.com/jens321/MuseAI](https://github.com/jens321/MuseAI)
 
 Reports:
 
