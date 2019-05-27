@@ -37,3 +37,7 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+.page-header h2 {
+  color: #2bafc4;
+}
