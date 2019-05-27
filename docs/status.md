@@ -13,9 +13,11 @@ The purpose of this project is to create a model that, given music as training d
 
 ## Approach
 -----------
-For the technical components of the project, we make use of scikit learn's Random Forest package to serve as the primary model for the project. A decision we had to make was how to set up the dataset to allow for the best training results. In our testing, the best results were had when using the 10 previous notes in order to predict the last note, updating the dataset as new information is predicted. This allows the model to follow the general trend of the trained music, while sacrificing some of the long-term pattern awareness that we were shooting for.
+For the technical components of the project, we make use of scikit learn's Random Forest package to serve as the primary model for the project. A decision we had to make was how to set up the dataset to allow for the best training results. In our testing, the best results were had when using the 10 previous notes in order to predict the last note, updating what we had predicted so far as new information is predicted. This allows the model to follow the general trend of the trained music, while sacrificing some of the long-term pattern awareness that we were shooting for.
 <br><br>
-For a more detailed description of how the dataset was created, we initially start off the training with a 10-note start from a song in order to begin the dataset creation. Once these 10 notes are in place, the model can begin using the trained random forest to make predictions for future notes, updating the dataset along the way. In this way, the model can keep seeing new combinations of notes and make appropriate selections based on the training, even if it has not seen that precise combination of notes in the past.
+For a more detailed description of how the dataset was created, we can look at the following diagram: 
+![training graph](dataset_diagram.png)
+The music notes at the top represent our list of about 160 training songs (80% of the total 200 songs). These get converted into their respective pitches, which are represented as integers in the code. We then have a sliding window of length 10 for each list of notes (each song is represented as a list of notes) and fill in the structure shown in the diagram. For example, in the first entry, we have the 10 first notes of the song, followed by the 11th note (Y11), which is the label for that training entry. This is then followed by an entry that starts with the second note (X2) and ends with the previously newly predicted note, and predicts the 12th note. We then follow this process for all songs in the training set, which yields the full structure show in the diagram above.  
 <br><br>
 We chose the random forest architecture as a starting point to allow for rapid testing, but we will likely be shifting to a more neural-network-oriented approach, as this will allow the generated music to have better long-term coherence. Since random forests are a very simplified way to approach the problem, this is not a possibility in the  project as it currently stands. 
 
@@ -27,7 +29,6 @@ This is the not the most accurate method of evaluating the function, but it allo
 <br><br>
 ![training graph](Training_graph.png)
 <br><br>
-As we can see from the graph, an increase in the number of musical pieces that the model trains on yields an improvement in the accuracy of the model, to a certain point. After training on more than approximately 200 songs, the test accuracy goes down, indicating that the model might be overtraining on the songs. A way to avoid this might be to train on more diverse pieces of music, to discourage the model from getting too specialized on a certain type of song. In addition, increasing the number of estimators for the random forest would allow us to reduce the overfitting, and allow for a less specialized, but more generalizeable model that can predict a wide variety of songs with decent accuracy. 
 
 ## Remaining Goals and Challenges
 ---------------------------------
