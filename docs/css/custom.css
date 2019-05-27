@@ -39,5 +39,5 @@ code {
 }
 
 .page-header h2 {
-  color: #2bafc4;
+  color: #2bafc4 !important;
 }
