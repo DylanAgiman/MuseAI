@@ -21,7 +21,7 @@ Since the project is primarily in the category of art, it is difficult to come u
 <br><br>
 This is the not the most accurate method of evaluating the function, but it allows us to get an idea of how similar our piece is to another piece of the same genre. As the number of pieces on which the model trains increases, the accuracy of the model also increases, albeit much more slowly than should be optimal. This graph illustrates the increase of the accuracy with an increase of trained pieces:
 <br><br>
-GRAPH HERE
+![training graph](Training_graph.png)
 <br><br>
 
 ## Remaining Goals and Challenges
