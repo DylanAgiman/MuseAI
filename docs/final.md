@@ -41,7 +41,7 @@ To be able to train by notes, we perform stochastic gradient descent by picking 
 <br /><br />
 Initially when training our RNN, we encountered a problem known as “exploding gradients”. Initially, we decreased the learning rate to prevent this problem, but loss convergence would then be very slow. Therefore, we used the solution proposed in [this paper](https://arxiv.org/abs/1211.5063), which advocates for gradient norm clipping. 
 
-After some testing and playing around with different hyper parameters and training configurations, we decided on the following values:
+After some testing and playing around with different hyperparameters and training configurations, we decided on the following values:
 * Learning Rate: 0.0005
 * Iterations: 100,000
 * Dataset size: 200
@@ -54,7 +54,7 @@ When training by sequences of notes, we performed stochastic gradient descent by
 
 ![Visualization of training on sequences](rnn_seq_training2.png)
 
-For our hyper parameters and training configuration values, we used the following: 
+For our hyperparameters and training configuration values, we used the following: 
 * Learning Rate: 0.0005
 * Iterations: 100,000
 * Dataset size: 200
@@ -79,6 +79,7 @@ We have found several disadvantages to using RNNs. Firstly, in our experiences, 
 
 ## Evaluation
 -------------
+To start off, we would like to note that over the entire dataset, we are predicting among a maximum of 33 possible classes (pitches). 
 
 ### Random Forest
 -----------------
