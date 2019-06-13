@@ -18,6 +18,7 @@ A baseline that we seeked to improve on was simply picking notes at random in or
 
 ### Baselines
 -------------
+In the beginning of the project, we used a model that selects notes in a completely random manner, from any possible note. However, we realized that this was not a very fair comparison, as there was a huge disparity in the notes being selected, and there was no reasonable way for the notes to sound musical. Thus since we start the song with the first ten notes of the original song, we only selected random notes out of the pool of notes that we already saw in that ten-note intro. By doing this, we saw a slight improvement in the baseline, though it still sounded far worse than our own finalized model, which is good.
 
 ### Random Forest
 -----------------
