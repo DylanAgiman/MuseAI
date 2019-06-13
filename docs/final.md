@@ -5,7 +5,7 @@ title:  Final Report
 
 ## Status Video
 ------------------
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8_JL92rZK0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Project Summary
 ------------------
@@ -86,7 +86,7 @@ To start off, we would like to note that over the entire dataset, we are predict
 In the first iteration of this project, for the evaluation function, we simply took a ten-note start of a song and predicted it as we would normally. Then, using a hit or miss strategy, if the note was identical to the expected note, the model would gain a point, and if it was not identical, the model would not gain a point. However, this mode of evaluation was lacking, as it is possible that the second most likely choice would be the correct note for the situation, and the evaluation is simply skipping it since it is not the dominant decision. Thus for this next iteration, we focused on relaxing this very strict "hit/miss" criteria, and checking the less likely options of the model as well to ensure that the correct note was not just "hiding" behind the more likely note. 
 <br><br>
 Thus, we also tested the accuracy of the model when the top K choices are consided, with the tested Ks being 1, 3, 5, and 10. As expected, when we relax this criteria, the model's accuracy improves, and we see a closer resemblance to the original song.
-![K-hit graph](hit_graph.png)
+![Random Forest Hit Accuracy Graph](rf_hit_accuracy2.png)
 <br><br>
 By looking at this graph, we can see that we were indeed getting a reasonably accurate prediction for our randomly chosen song.
 
