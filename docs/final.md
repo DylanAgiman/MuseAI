@@ -3,7 +3,7 @@ layout: default
 title:  Final Report
 ---
 
-## Status Video
+## Final Video
 ------------------
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8_JL92rZK0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -29,7 +29,7 @@ The Random Forest was the model that we began with, and it turned out to be the 
 
 To be able to compare the performance of the Random Forest classifier described above, we decided to add in a different model called a recurrent neural network. 
 <br /><br />
-We used two different ways of training our RNN, and we report accuracy scores for both ways in the sections below. Before we go into this, let’s first look at the general architecture we used for our RNN, shown in the diagram below: 
+We used two different ways of training our RNN, and we report accuracy scores for both ways in the sections below. Before we go into this, let’s first look at the general architecture we used for our RNN (based on [this PyTorch tutorial](https://pytorch.org/tutorials/intermediate/char_rnn_generation_tutorial.html)), shown in the diagram below: 
 
 ![General RNN Architecture](rnn_arch2.png)
 
