@@ -18,11 +18,11 @@ A baseline that we seeked to improve on was simply picking notes at random in or
 
 ### Baselines
 -------------
-In the beginning of the project, we used a model that selects notes in a completely random manner, from any possible note. However, we realized that this was not a very fair comparison, as there was a huge disparity in the notes being selected, and there was no reasonable way for the notes to sound musical. Thus since we start the song with the first ten notes of the original song, we only selected random notes out of the pool of notes that we already saw in that ten-note intro. By doing this, we saw a slight improvement in the baseline, though it still sounded far worse than our own finalized model, which is good.
+In the beginning of the project, we used a model that selects notes in a completely random manner, from any possible note. However, we realized that this was not a very fair comparison, as there was a huge disparity in the notes being selected, and there was no reasonable way for the notes to sound musical. For our new baseline, we only selected random notes out of the pool of notes that we already saw in the ten-note intro. By doing this,we saw a slight improvement in the baseline, though it still sounded far worse than our own finalized model, which is good result.
 
 ### Random Forest
 -----------------
-The Random Forest was the model that we began with, and it turned out to be the model that we had the most success with. The way we set up the model was in a "sliding window" type of sampling. We began the model with the first ten notes of a song, and used those ten notes to predict the next note. Once that note is predicted, we then drop the first note, append the new note to the end, and repeat the process with our new ten-note sample. Since the model was so simplified, it was easy to prototype changes to the model and test them rapidly. However, while this model gave us the most consistently pleasing results, it did have some drawbacks. Since the model was merely a number of decision trees, it does not have the capability to track long-term patterns in the music, and relies solely on the previous ten notes to determine the new note. Something like a Recurrent Neural Network (RNN) might work better for this purpose, but the RNN that we tried sounded worse than the Random Forest in our testing.
+The Random Forest was the model that we began with, and it turned out to be the model that we had the most success with. The way we set up the model was in a "sliding window" type of sampling. We began the model with the first ten notes of a song, and used those ten notes to predict the next note (out of a maximum of 33 classes to predict). Once that note is predicted, we then drop the first note, append the new note to the end, and repeat the process with our new ten-note sample. Since the model was so simplified, it was easy to prototype changes to the model and test them rapidly. However, while this model gave us the most consistently pleasing results, it did have some drawbacks. Since the model was merely a number of decision trees, it does not have the capability to track long-term patterns in the music, and relies solely on the previous ten notes to determine the new note. Something like a Recurrent Neural Network (RNN) might work better for this purpose, but the RNN that we tried sounded worse than the Random Forest in our testing.
 
 ### Recurrent Neural Network
 ----------------------------
@@ -47,7 +47,7 @@ After some testing and playing around with different hyperparameters and trainin
 * Dataset size: 200
 * Gradient clipping: 100
 
-We also note that training the RNN by notes took much longer than training by sequences of notes (described below), as we have to do less forward passes through the network per iteration. 
+We also note that training the RNN by notes took much longer than training by sequences of notes (described below), as we have to do more forward passes through the network per iteration. 
 
 #### Training by sequences
 When training by sequences of notes, we performed stochastic gradient descent by picking a sequence of 10 notes from our dataset and predicting the one that comes after (the 11th note). The following diagram presents a visualization of this: 
@@ -67,12 +67,10 @@ As mentioned in the previous section, this way of training the RNN went signific
 To conclude this section, let’s look at some advantages and disadvantages of RNNs. 
 
 #### Advantages
-The main advantage of using a RNN would be that it is supposed to be able to capture more music dependencies, such as local coherences, pitch variations, etc. However, due to difficulties we have encountered as described above, unfortunately we have not been able to enjoy the full power of RNNs. 
+The main advantage of using a RNN would be that it is supposed to be able to capture more music dependencies, such as local coherences, pitch variations, etc. However, due to difficulty we experienced when training and testing the RNN, unfortunately we have not been able to enjoy the full power of RNNs. A richer architecture for the RNN could have proven more fruitful, but we did not explore different architectures.  
 
 #### Disadvantages
-We have found several disadvantages to using RNNs. Firstly, in our experiences, they were much harder to train than our other classifiers. For the RNN, there is not one perfect architecture that always works, and experimenting with other more expressive architectures is one possible way our results could have been improved. Furthermore, it is not as straightforward to process all information in training. We had to make sure we passed the hidden state correctly to the next time sequence, read the output at the right time, etc. Finally, we also experienced that RNNs take longer to train, are less accurate (see evaluation), and less musical for our current task of generating music.
-
-
+We have found several disadvantages to using RNNs. Firstly, in our experience, they were much harder to train than our other classifiers. For the RNN, there is not one perfect architecture that always works, and experimenting with other more expressive architectures is one possible way our results could have been improved. Furthermore, it is not as straightforward to process all information in training. We had to make sure we passed the hidden state correctly to the next time sequence, read the output at the right time, etc. Finally we also experienced that our RNN takes longer to train, is less accurate (see evaluation), and less musical for our current task of generating music.
 
 ### SVM and other models
 ------------------------
