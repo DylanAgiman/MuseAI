@@ -78,11 +78,13 @@ In addition, we utilized a different model called the Support Vector Machine (Cl
 
 For our hyperparameters and training configurations, the non-defaulted values we used are:
 * Kernel: Radial
-		** We selected this because we are using SVM for non-linear classification. 
-* Regularization Parameter C: 100
-		** This tells the model how much we want to avoid misclassifying each training example. 
+	- We selected this because we are using SVM for non-linear classification. 
+* Regularization Parameter: 100
+	- This tells the model how much we want to avoid misclassifying each training example. 
 * Gamma: .001
-		** We tested from using single digit values to decimal values. The lower the gamma, the more loosely our model will fit the training set. 
+	- We tested from using single digit values to decimal values. The lower the gamma, the more loosely our model will fit the training set. When the gamma was set to 1, the generated music contained a majority of repeated notes.
+
+Overall, our model of SVM did not generate music at the same quality as our Random Forest model. SVM did not work well with generating music.
 
 
 ## Evaluation
