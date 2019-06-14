@@ -74,6 +74,16 @@ We have found several disadvantages to using RNNs. Firstly, in our experience, t
 
 ### SVM and other models
 ------------------------
+In addition, we utilized a different model called the Support Vector Machine (Classifier) to train and generate music with. This model works to find the separation of classes. However, after training, this model did not generate the best sounding music. 
+
+For our hyperparameters and training configurations, the non-defaulted values we used are:
+* Kernel: Radial
+		** We selected this because we are using SVM for non-linear classification. 
+* Regularization Parameter C: 100
+		** This tells the model how much we want to avoid misclassifying each training example. 
+* Gamma: .001
+		** We tested from using single digit values to decimal values. The lower the gamma, the more loosely our model will fit the training set. 
+
 
 ## Evaluation
 -------------
